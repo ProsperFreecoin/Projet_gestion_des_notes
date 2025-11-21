@@ -20,6 +20,9 @@ public class ParseurCommande {
             case "HELP" :
                commande = new CmAide();
                break;
+            case "ETU" :
+               commande = new CmListerEtudiantsParcours();
+               break;
             default : 
                commande = new CmInconnue();
         }

@@ -4,18 +4,22 @@
  */
 package cli;
 
+import metier.Parcours;
+
 /**
  *
  * @author freecoin
  */
-public class CmAide extends Commande{
+public class CmListerEtudiantsParcours extends Commande{
     @Override
     public void executer() {
-        System.out.println("Exit : quitter le programme");
-        System.out.println("Help : aide");
+        Parcours parcours = Parcours.getListe().get(0);
+        parcours.afficher();
+        parcours.afficherEtudiants();
     }
 
     @Override
     public void setParametres(String[] parametres) {
     }
 }
+

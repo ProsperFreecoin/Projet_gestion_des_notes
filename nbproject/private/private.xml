@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/metier/Etablissement.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/metier/Etudiant.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/gestion/notes/Main.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/metier/InscriptionUE.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/metier/Ordinateur.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/metier/Parcours.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/metier/UniteEnseignement.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/cli/Commande.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/cli/ParseurCommande.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/cli/CmQuitter.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/cli/CmAide.java</file>
+            <file>file:/home/freecoin/NetBeansProjects/gestion-notes/src/cli/CmInconnue.java</file>
+        </group>
+    </open-files>
+</project-private>

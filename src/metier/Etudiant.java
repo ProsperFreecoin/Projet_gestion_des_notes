@@ -31,7 +31,14 @@ public class Etudiant {
         this.dateNaissance= dateNaissance;
         this.numeroCarte= numeroCarte;
     }
-
+    
+    public static String getHeader(){  
+        return "N° \t Carte \t Nom \t Prénom \t Date de naissance";
+    }
+    public void afficher(){
+        System.out.println(this);
+    }
+    
 //    public float getMoyenne(){
 //        private float 
 //    }
@@ -90,4 +97,13 @@ public class Etudiant {
     public void setOrdinateur(Ordinateur ordinateur) {
         this.ordinateur = ordinateur;
     }
+
+    @Override
+    public String toString() {
+        return this.numeroCarte + "\t" 
+                + this.nom + "\t" 
+                + this.prenom + "\t" 
+                + this.dateNaissance;
+    }
+   
 }

@@ -12,24 +12,48 @@ import java.util.List;
  * @author freecoin
  */
 public class Parcours {
+    private static List<Parcours> liste = new ArrayList<>();
+    private int id;
     private String libelle;
     private List<Etudiant> etudiants = new ArrayList<>();
     private List<Etablissement> etablissements= new ArrayList<>();
     private List<UniteEnseignement> uniteEnseignements = new ArrayList<>();
     
     public Parcours(){
+        liste.add(this);
     }
-
+    public Parcours(int id , String libelle){
+        this();
+        this.id = id;
+        this.libelle = libelle;
+    }
+    
+    public void afficher(){
+        System.out.println(this);
+    }
+    public void afficherEtudiants(){
+        int i = 1;
+        System.out.println(Etudiant.getHeader());
+        for(Etudiant etudiant : this.etudiants){
+            System.out.println(i + "\t " + etudiant);
+            i++;
+        }
+            
+    }
+    public void inscrireEtudiant(Etudiant etudiant){
+        etudiant.setParcours(this);
+        this.etudiants.add(etudiant);
+    }
+    
     public String getLibelle() {
         return libelle;
     }
-    
-    public Parcours(String libelle){
-        this.libelle= libelle;
-    }
-
     public void setLibelle(String libelle) {
         this.libelle = libelle;
+    }
+    
+    public static List<Parcours> getListe(){
+        return liste;
     }
 //getter et setter de l'association entre Parcours et Etudiant
     public List<Etudiant> getEtudiants() {
@@ -47,12 +71,17 @@ public class Parcours {
     public void setEtablissements(List<Etablissement> etablissements) {
         this.etablissements = etablissements;
     }
-
+    
  //getter et setter de l'association entre Parcours et UniteEnseignement
     public List<UniteEnseignement> getUniteEnseignements() {
         return uniteEnseignements;
     }
     public void setUniteEnseignements(List<UniteEnseignement> uniteEnseignements) {
         this.uniteEnseignements = uniteEnseignements;
+    }
+    
+    @Override
+    public String toString() {
+        return this.libelle;
     }
 }
