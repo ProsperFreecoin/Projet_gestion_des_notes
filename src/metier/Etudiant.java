@@ -39,9 +39,15 @@ public class Etudiant {
         System.out.println(this);
     }
     
-//    public float getMoyenne(){
-//        private float 
-//    }
+    public float getMoyenne(){
+        int sommeCredits = 0;
+        float moyenneAlgebrique = 0;
+         for(InscriptionUE iUE : this.inscriptionUE){ 
+            sommeCredits +=iUE.getuE().getNbreCredits(); 
+            moyenneAlgebrique +=iUE.getMoyenne();
+        }
+        return moyenneAlgebrique/sommeCredits;
+    }
     
     public String getNom() {
         return nom;

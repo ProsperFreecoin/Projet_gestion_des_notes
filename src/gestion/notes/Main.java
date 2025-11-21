@@ -24,9 +24,9 @@ public class Main {
     private static Scanner clavier = new Scanner(System.in);
     private static ParseurCommande parseur = new ParseurCommande();
     public static void main(String[] args) {
-        Parcours lproGL = new Parcours(1, "lproGL");
-        lproGL.inscrireEtudiant(new Etudiant("ADAKANOU", "Koffi Heritier", LocalDate.now(), 23432));
-        lproGL.inscrireEtudiant(new Etudiant("SEWONOU", "Agneau Pascale", LocalDate.now(), 12876));
+//        Parcours lproGL = new Parcours(1, "lproGL");
+//        lproGL.inscrireEtudiant(new Etudiant("ADAKANOU", "Koffi Heritier", LocalDate.now(), 23432));
+//        lproGL.inscrireEtudiant(new Etudiant("SEWONOU", "Agneau Pascale", LocalDate.now(), 12876));
         System.out.println("Bonjour!!!");
         while(true){
             String strCmde = clavier.nextLine();

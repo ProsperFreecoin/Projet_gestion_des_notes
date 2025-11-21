@@ -4,6 +4,8 @@
  */
 package cli;
 
+import java.util.Arrays;
+
 /**
  *
  * @author freecoin
@@ -23,10 +25,19 @@ public class ParseurCommande {
             case "ETU" :
                commande = new CmListerEtudiantsParcours();
                break;
+            case "PARCOURS-CREER" :
+               commande = new CmParcoursCreer();
+               break;
+            case "PARCOURS-AFFICHER" :
+               commande = new CmParcoursAfficher();
+               break;
             default : 
                commande = new CmInconnue();
         }
-        commande.setParametres(tbCmd);
-        return commande;
+        if(tbCmd.length>=1){    
+            String[] parametres = Arrays.copyOfRange(tbCmd, 1, tbCmd.length);
+            commande.setParametres(parametres);       
+        }
+         return commande;
     }
 }
