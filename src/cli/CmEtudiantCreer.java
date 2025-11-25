@@ -28,17 +28,17 @@ public class CmEtudiantCreer extends Commande{
     //Parametre à entrer(tout ce que le user doit saisir est mis ici) 
     @Override
     public void setParametres(String[] parametres) {
-        this.nom= parametres[0];
-        this.prenom= parametres[1];
+        /*Conversion de String en int*/
+        this.numeroCarte= Integer.parseInt(parametres[0]);
+        this.nom= parametres[1];
+        this.prenom= parametres[2];
         /*Parametre qui permet de convertir les String en date; c'est à dire 
         que lorsque l'user saisi la date , vu que les paramètres qui sont stockés 
         sont des String,la date sera envoyé ou stockée en String. Maintenant quand
         l'user va afficher cela, cette methode va permettre de la lui afficher
         sous son vrai type(date)*/
-        this.dateNaissance= LocalDate.parse(parametres[2]);
+        this.dateNaissance= LocalDate.parse(parametres[3]);
         //Parse permet de convertir le string en une donnée que le programme comprend
-        /*Conversion de String en int*/
-        this.numeroCarte= Integer.parseInt(parametres[3]);
     }
     
 }

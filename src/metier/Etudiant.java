@@ -43,10 +43,12 @@ public class Etudiant {
         this.id = id;
         this.numeroCarte = numeroCarte;
     }
-    public Etudiant(String nom, String prenom, LocalDate dateNaissance ,int 
-            numeroCarte,int id){
-        this(sequence, id);
+    public Etudiant(int numeroCarte, String nom, String prenom, LocalDate dateNaissance){
+        this(sequence, numeroCarte);
         sequence = sequence +1;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.dateNaissance = dateNaissance;
     }
     public static String getHeaders(){  
         return "N° \t Identifiant \t Numero de carte";
