@@ -7,12 +7,16 @@ package metier;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import static metier.Parcours.getHeader;
 
 /**
  *
  * @author freecoin
  */
 public class Etudiant {
+    private static List<Etudiant> liste = new ArrayList();
+    private static int sequence = 1;
+    private int id;
     private String nom;
     private String prenom;
     private LocalDate dateNaissance;
@@ -22,18 +26,41 @@ public class Etudiant {
     private Ordinateur ordinateur;
     
     public Etudiant(){
+       //Ajout des etudiants entrés dans la liste des etudiants
+       liste.add(this);
     }
     
     public Etudiant(String nom, String prenom, LocalDate dateNaissance ,int 
             numeroCarte){
+        this();
         this.nom= nom;
         this.prenom= prenom;
         this.dateNaissance= dateNaissance;
         this.numeroCarte= numeroCarte;
     }
-    
+    public Etudiant(int id, int numeroCarte){
+        this();
+        this.id = id;
+        this.numeroCarte = numeroCarte;
+    }
+    public Etudiant(String nom, String prenom, LocalDate dateNaissance ,int 
+            numeroCarte,int id){
+        this(sequence, id);
+        sequence = sequence +1;
+    }
+    public static String getHeaders(){  
+        return "N° \t Identifiant \t Numero de carte";
+    }
     public static String getHeader(){  
         return "N° \t Carte \t Nom \t Prénom \t Date de naissance";
+    }
+    public static void afficherTout(){
+        int i = 1;
+        System.out.println(getHeader());
+        for(Etudiant e: liste){
+            System.out.println(i + "\t " + e);
+            i++;
+        }
     }
     public void afficher(){
         System.out.println(this);
@@ -42,7 +69,7 @@ public class Etudiant {
     public float getMoyenne(){
         int sommeCredits = 0;
         float moyenneAlgebrique = 0;
-         for(InscriptionUE iUE : this.inscriptionUE){ 
+        for(InscriptionUE iUE : this.inscriptionUE){ 
             sommeCredits +=iUE.getuE().getNbreCredits(); 
             moyenneAlgebrique +=iUE.getMoyenne();
         }
@@ -104,6 +131,10 @@ public class Etudiant {
         this.ordinateur = ordinateur;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return this.numeroCarte + "\t" 

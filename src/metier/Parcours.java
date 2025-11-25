@@ -21,6 +21,7 @@ public class Parcours {
     private List<UniteEnseignement> uniteEnseignements = new ArrayList<>();
     
     public Parcours(){
+        //ajout de chaque parcours entré dans une liste
         liste.add(this);
     }
     public Parcours(int id , String libelle){
@@ -97,6 +98,7 @@ public class Parcours {
     public void setUniteEnseignements(List<UniteEnseignement> uniteEnseignements) {
         this.uniteEnseignements = uniteEnseignements;
     }
+    
     
     
     @Override

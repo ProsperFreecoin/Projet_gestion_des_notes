@@ -6,6 +6,7 @@ package cli;
 
 import java.util.Arrays;
 
+
 /**
  *
  * @author freecoin
@@ -31,6 +32,12 @@ public class ParseurCommande {
             case "PARCOURS-AFFICHER" :
                commande = new CmParcoursAfficher();
                break;
+            case "ETUDIANT-CREER" :
+                commande = new CmEtudiantCreer();
+                break;
+            case "ETUDIANT-AFFICHER" :
+                commande = new CmEtudiantAfficher();
+                break;
             default : 
                commande = new CmInconnue();
         }

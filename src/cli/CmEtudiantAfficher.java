@@ -4,28 +4,22 @@
  */
 package cli;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import metier.Etudiant;
 import metier.Parcours;
-
 
 /**
  *
  * @author freecoin
  */
-public class CmParcoursCreer extends Commande{
-    private String libelle;
-    
-    
+public class CmEtudiantAfficher extends Commande {
+
     @Override
     public void executer() {
-        if(this.libelle != null){
-            new Parcours( this.libelle);
-        }
+        Etudiant.afficherTout();
     }
 
     @Override
     public void setParametres(String[] parametres) {
-        this.libelle= parametres[0];
     }
+    
 }
